@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f9;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+canvas {
+  background: #f0f0f0;
+  border: 4px solid #000000;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+#info { font-family: monospace; font-size: 16px; }
+.hint { color: #a6adc8; font-size: 14px; }
