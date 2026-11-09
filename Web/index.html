@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gavin Production - tempat tinggal Gavin. Game production, game design, dan audio.">
+    <title>GAVIN PRODUCTION</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap bar">
+        <a class="brand" href="#top">Gavin Production</a>
+        <nav class="nav" aria-label="Menu utama">
+            <a href="#tentang">Tentang</a>
+            <a href="#game">Game</a>
+            <a href="#layanan">Layanan</a>
+            <a href="#pesan">Cara pesan</a>
+            <a href="#member">Member</a>
+            <a href="#video">Video</a>
+        </nav>
+        <a class="btn btn-small" href="#kontak">Hubungi kami</a>
+    </div>
+</header>
+
+<main id="top">
+
+    <section class="hero">
+        <div class="wrap hero-grid">
+            <div class="hero-copy">
+                <h1>Welcome to the Gavin Production</h1>
+                <p class="lead">Tempat tinggal Gavin. Kami bikin game, desain game, dan musiknya, sambil ngopi.</p>
+                <div class="actions">
+                    <a class="btn" href="#game">Mainkan game</a>
+                    <a class="btn btn-ghost" href="https://neevan42.itch.io/albertstein" target="_blank" rel="noopener">Game di itch.io</a>
+                </div>
+            </div>
+            <div class="hero-art">
+                <img src="images (6).jpeg" alt="Dokter">
+                <span class="badge">W77</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="promo" aria-label="Promo">
+        <div class="wrap promo-inner">
+            <p>Promo bulan ini: <mark>Gratis Gavin untuk setiap pembelian Gavin</mark></p>
+            <p>Kami <strong>buka setiap hari</strong>, dan Gavinnya <em>selalu panas</em>.</p>
+        </div>
+    </section>
+
+    <section class="section" id="tentang">
+        <div class="wrap about-grid">
+            <div class="about-text">
+                <h2>Tentang kami</h2>
+                <p>lorem ipsum dolor sit amet consectetur adipiscing elit et sint tempore placeat quo ut et qui laboris do sed voluptate omnis quibusdam ut fugiat molestias quibusdam laboris tempor praesentium temporibus deserunt vero id et qui temporibus reprehenderit at optio culpa ea omnis blanditiis consequat nobis elit similique duis animi ullamco</p>
+                <p>Kami tergabung dalam <abbr title="Warkop 777 Production">W77</abbr>.</p>
+            </div>
+            <div class="panel audio-panel">
+                <h3>Lagu kami</h3>
+                <audio controls>
+                    <source src="main_game (1).wav" type="audio/wav">
+                </audio>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-tint" id="game">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>Mainkan game kami</h2>
+                <button type="button" class="btn btn-ghost btn-small" id="fullscreenGame" hidden>Layar penuh</button>
+            </div>
+            <div class="game-frame" id="gameFrame">
+                <div class="game-cover">
+                    <button type="button" class="play" id="startGame">
+                        <span class="play-icon" aria-hidden="true"></span>
+                        Mulai game
+                    </button>
+                </div>
+                <iframe id="gameIframe" data-src="SeedTest/index.html" title="Game Gavin Production" allow="fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="layanan">
+        <div class="wrap">
+            <h2>Layanan kami</h2>
+            <div class="services">
+                <article class="panel service">
+                    <h3>Game Production</h3>
+                    <p>Dari ide sampai game jadi yang bisa dimainkan di browser.</p>
+                </article>
+                <article class="panel service">
+                    <h3>Game Design</h3>
+                    <p>Mekanik, level, dan alur permainan yang enak dipakai.</p>
+                </article>
+                <article class="panel service">
+                    <h3>Audio dan musik</h3>
+                    <p>Lagu dan efek suara yang pas dengan suasana game.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-tint" id="pesan">
+        <div class="wrap">
+            <h2>Cara pesan</h2>
+            <ol class="steps">
+                <li><strong>Hubungi kami</strong><span>Kirim pesan lewat form di bawah.</span></li>
+                <li><strong>Diskusi Gavin</strong><span>Kita bahas kebutuhan dan paketnya.</span></li>
+                <li><strong>Produksi</strong><span>Kami kerjakan dan kabari tiap tahap.</span></li>
+                <li><strong>Selesai dan ngopi bareng</strong><span>Hasil diserahkan, kopi menyusul.</span></li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="section gallery-section" id="member">
+        <div class="wrap">
+            <h2>Member Gavin Production</h2>
+        </div>
+        <div class="gallery-wrap">
+            <div class="gallery-handle" id="handle" aria-hidden="true">&harr;</div>
+            <div class="gallery" id="gallery">
+                <figure class="slide">
+                    <img src="Zohran_Mamdani_05.25.25_(3x4_cropped_b).jpg" alt="Zohran 1">
+                    <figcaption><strong>Zohran</strong><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small></figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="Zohran_Mamdani_05.25.25_(3x4_cropped_b).jpg" alt="Zohran 2">
+                    <figcaption><strong>Zohran</strong><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small></figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="Zohran_Mamdani_05.25.25_(3x4_cropped_b).jpg" alt="Zohran 3">
+                    <figcaption><strong>Zohran</strong><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small></figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="Zohran_Mamdani_05.25.25_(3x4_cropped_b).jpg" alt="Zohran 4">
+                    <figcaption><strong>Zohran</strong><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small></figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="Zohran_Mamdani_05.25.25_(3x4_cropped_b).jpg" alt="Zohran 5">
+                    <figcaption><strong>Zohran</strong><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small></figcaption>
+                </figure>
+                <figure class="slide">
+                    <img src="Zohran_Mamdani_05.25.25_(3x4_cropped_b).jpg" alt="Zohran 6">
+                    <figcaption><strong>Zohran</strong><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small></figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="gallery-nav">
+            <button type="button" class="round" id="prevSlide" aria-label="Sebelumnya">&larr;</button>
+            <button type="button" class="round" id="nextSlide" aria-label="Berikutnya">&rarr;</button>
+        </div>
+    </section>
+
+    <section class="section section-tint" id="video">
+        <div class="wrap">
+            <h2>Video</h2>
+            <figure class="video-figure">
+                <video controls preload="metadata">
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+                <figcaption>Suasana Warkop 777 di malam hari</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="section" id="kontak">
+        <div class="wrap contact-grid">
+            <div class="contact-info">
+                <h2>Hubungi kami</h2>
+                <p>Ceritakan game yang kamu mau. Kami balas secepatnya.</p>
+                <address class="panel">
+                    <h3>Alamat</h3>
+                    Jl. Kopi Nikmat No. 777<br>
+                    Depok, Jawa Barat<br>
+                    Indonesia
+                </address>
+            </div>
+            <form class="contact panel" action="#" method="post">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama" autocomplete="name">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email">
+
+                <label for="paket">Pilih paket</label>
+                <select id="paket" name="paket">
+                    <option value="basic">Basic</option>
+                    <option value="premium">Premium</option>
+                </select>
+
+                <label for="pesan-teks">Pesan</label>
+                <textarea id="pesan-teks" name="pesan" rows="4"></textarea>
+
+                <button type="submit" class="btn btn-block">Kirim pesan</button>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <p>&copy; Gavin Production &middot; W77</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
