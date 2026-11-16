@@ -68,6 +68,7 @@ const fullscreenGame = document.getElementById('fullscreenGame');
 
 if (startGame && gameIframe && gameFrame) {
     startGame.addEventListener('click', () => {
+        // Load the iframe src from data-src when play is clicked
         gameIframe.src = gameIframe.dataset.src;
         gameFrame.classList.add('playing');
         fullscreenGame.hidden = false;
