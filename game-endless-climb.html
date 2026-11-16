@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Endless Climb - UnGav</title>
+    <link rel="stylesheet" href="globals.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap bar">
+            <a href="index.html" class="brand">UnGav Interactive</a>
+            <nav class="nav">
+                <a href="index.html#games">Games</a>
+                <a href="index.html#tentang">Tentang</a>
+                <a href="index.html#tim">Tim</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section wrap section-game-header">
+        <p class="breadcrumb">Games / <strong>The Endless Climb</strong></p>
+        
+        <div class="game-frame" id="gameFrame">
+            <div class="game-cover">
+                <button class="play" id="startGame">
+                    <div class="play-icon"></div> Mulai Main
+                </button>
+            </div>
+            <!-- Embedded Itch.io link -->
+            <iframe id="gameIframe" data-src="https://itch.io/embed-html/3103233" allowfullscreen></iframe>
+        </div>
+        
+        <div class="game-controls-info">
+            <div>
+                <p class="controls-text">[Kontrol: WASD / Spasi]</p>
+                <small class="desktop-notice">Lebih nyaman dimainkan di desktop</small>
+            </div>
+            <button class="btn btn-ghost btn-small" id="fullscreenGame" hidden>Layar Penuh</button>
+        </div>
+    </section>
+
+    <section class="section section-tint">
+        <div class="wrap about-grid">
+            <div>
+                <h2 class="mb-12">The Endless Climb</h2>
+                <span class="badge-playable-main">Playable</span>
+                <p class="font-600">Survival</p>
+                <p class="lead">The Endless Climb is a 2D rope-climbing game that forces you to jump from one rope to another to the top, while avoiding obstacles that will hinder you. And you, as the all-knowing player that has been blessed by the God of thunder himself, your phone got stolen by some monkey whilst you were on a climb, now you have to reach the top and get it back!</p>
+            </div>
+            <div class="panel">
+                <h3 class="mb-20">Cara Main</h3>
+                <ul class="steps steps-vertical">
+                    <li>
+                        <strong>Lompat</strong>
+                        <span>Gunakan tombol spasi untuk melompat antar tali.</span>
+                    </li>
+                    <li>
+                        <strong>Hindari Rintangan</strong>
+                        <span>Perhatikan pola rintangan dan hindari benturan agar tidak jatuh.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>UnGav Interactive | D4 Teknologi Permainan Polimedia</p>
+        </div>
+    </footer>
+
+    <script src="ide.js"></script>
+</body>
+</html>
