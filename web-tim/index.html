@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UnGav Interactive</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -33,7 +34,7 @@
                     <a href="#tentang" class="btn">Tentang Kami</a>
                 </div>
             </div>
-            <div class="hero-art">
+            <div class="hero-art" data-tilt data-tilt-max="8" data-tilt-speed="400">
                 <img src="images/icon-studio.png" alt="icon studio UnGav Interactive" class="img-full">
             </div>
         </div>
@@ -41,12 +42,12 @@
 
     <section id="tentang" class="section section-tint">
         <div class="wrap about-grid">
-            <div class="hero-art img-full">
-                <div class="logo-fallback-container">
+            <div class="hero-art img-full" data-aos="fade-right">
+                <div class="logo-fallback-container" data-tilt data-tilt-max="8" data-tilt-speed="400">
                     <h2 class="logo-fallback-text">UnGav</h2>
                 </div>
             </div>
-            <div class="about-text">
+            <div class="about-text" data-aos="fade-left" data-aos-delay="150">
                 <h2>Tentang Studio</h2>
                 <p>Kami adalah sekumpulan pengembang game dari Polimedia yang percaya bahwa setiap ide layak dicoba. Visi kami adalah menciptakan pengalaman bermain yang unik melalui eksperimen dan kolaborasi.</p>
                 <div class="stats-row">
@@ -68,14 +69,14 @@
     </section>
 
     <section id="tim" class="section wrap">
-        <div class="section-head">
+        <div class="section-head" data-aos="fade-up">
             <div>
                 <h2>Tim</h2>
                 <p class="color-text">Orang - Orang Gokil yang apa apa jalanin aja dulu</p>
             </div>
         </div>
         <div class="services">
-            <div class="panel text-center">
+            <div class="panel text-center" data-aos="fade-up" data-aos-delay="100" data-tilt data-tilt-max="6" data-tilt-speed="400">
                 <div class="polaroid deco-tape">
                     <img src="images/tim/gavin.webp" alt="Gavin Mahesya Marviano" class="team-photo">
                 </div>
@@ -83,7 +84,7 @@
                 <p class="team-role">Programmer &amp; Game Designer</p>
                 <a href="https://neevan42.itch.io/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-small team-link">Itch.io</a>
             </div>
-            <div class="panel text-center">
+            <div class="panel text-center" data-aos="fade-up" data-aos-delay="200" data-tilt data-tilt-max="6" data-tilt-speed="400">
                 <div class="polaroid deco-clip">
                     <img src="images/tim/dzakwan.webp" alt="Muhammad Rafi Dzakwan" class="team-photo">
                 </div>
@@ -91,7 +92,7 @@
                 <p class="team-role">Artist &amp; Game Designer</p>
                 <a href="https://itch.io/profile/medvedd" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-small team-link">Itch.io</a>
             </div>
-            <div class="panel text-center">
+            <div class="panel text-center" data-aos="fade-up" data-aos-delay="300" data-tilt data-tilt-max="6" data-tilt-speed="400">
                 <div class="polaroid deco-sticker">
                     <img src="images/tim/sarah.webp" alt="Sarah Adibah" class="team-photo">
                 </div>
@@ -104,28 +105,28 @@
 
     <section id="games" class="section section-tint">
         <div class="wrap">
-            <div class="section-head">
+            <div class="section-head" data-aos="fade-up">
                 <div>
                     <h2>Game Kami</h2>
                     <p class="color-text">Daftar game yang sudah kita buat</p>
                 </div>
             </div>
             <div class="services">
-                <div class="panel">
+                <div class="panel" data-aos="zoom-in-up" data-aos-delay="100" data-tilt data-tilt-max="6" data-tilt-speed="400">
                     <img src="images/game/endless-climb.png" alt="The Endless Climb" class="panel-img">
                     <span class="badge-playable">Playable</span>
                     <h3>The Endless Climb</h3>
                     <p>Survival</p>
                     <a href="game-endless-climb.html" class="btn btn-block">Detail Game</a>
                 </div>
-                <div class="panel">
+                <div class="panel" data-aos="zoom-in-up" data-aos-delay="200" data-tilt data-tilt-max="6" data-tilt-speed="400">
                     <img src="images/game/tri-buddy-problem.png" alt="Tri-Buddy Problem" class="panel-img">
                     <span class="badge-playable">Playable</span>
                     <h3>Tri-Buddy Problem</h3>
                     <p>Puzzle</p>
                     <a href="game-tri-buddy.html" class="btn btn-block">Detail Game</a>
                 </div>
-                <div class="panel">
+                <div class="panel" data-aos="zoom-in-up" data-aos-delay="300" data-tilt data-tilt-max="6" data-tilt-speed="400">
                     <img src="images/game/liminal-parking.png" alt="Liminal Parking" class="panel-img">
                     <span class="badge-playable">Playable</span>
                     <h3>Liminal Parking</h3>
@@ -142,6 +143,8 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <script src="ide.js"></script>
 </body>
 </html>

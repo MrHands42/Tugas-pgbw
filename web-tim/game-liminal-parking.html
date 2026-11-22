@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liminal Parking - UnGav</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,9 +25,9 @@
     </header>
 
     <section class="section wrap section-game-header">
-        <p class="breadcrumb">Games / <strong>Liminal Parking</strong></p>
+        <p class="breadcrumb" data-aos="fade-down">Games / <strong>Liminal Parking</strong></p>
 
-        <div class="game-frame" id="gameFrame">
+        <div class="game-frame" id="gameFrame" data-aos="zoom-in" data-aos-delay="100">
             <div class="game-cover">
                 <button class="play" id="startGame">
                     <div class="play-icon"></div> Mulai Main
@@ -36,9 +37,9 @@
             <iframe id="gameIframe" data-src="MASUKKAN_LINK_EMBED_HTML_ITCH_IO_DISINI" allowfullscreen></iframe>
         </div>
 
-        <div class="game-controls-info">
+        <div class="game-controls-info" data-aos="fade-up" data-aos-delay="150">
             <div>
-                <p class="controls-text">[Kontrol: WASD / Mouse]</p>
+                <p class="controls-text">[Kontrol: Drag / Drop]</p>
                 <small class="desktop-notice">Lebih nyaman dimainkan di desktop</small>
             </div>
             <button class="btn btn-ghost btn-small" id="fullscreenGame" hidden>Layar Penuh</button>
@@ -47,13 +48,13 @@
 
     <section class="section section-tint">
         <div class="wrap about-grid">
-            <div>
+            <div data-aos="fade-right">
                 <h2 class="mb-12">Liminal Parking</h2>
                 <span class="badge-playable-main">Playable</span>
                 <p class="font-600">Simulation</p>
                 <p class="lead">The Liminal Parking adalah game simulasi unik yang menceritakan tentang seorang anak kecil yang bermimpi dan berimajinasi memiliki lahan parkir sendiri dan menjadi pengelolanya.</p>
             </div>
-            <div class="panel">
+            <div class="panel" data-aos="fade-left" data-aos-delay="150" data-tilt data-tilt-max="5" data-tilt-speed="400">
                 <h3 class="mb-20">Cara Main</h3>
                 <ul class="steps steps-vertical">
                     <li>
@@ -75,6 +76,8 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
     <script src="ide.js"></script>
 </body>
 </html>

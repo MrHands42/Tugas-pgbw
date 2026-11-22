@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Hamburger menu toggle
+    // AOS scroll animation
+    if (typeof AOS !== "undefined") {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 80
+        });
+    }
+        // Hamburger menu toggle
     const navToggle = document.getElementById("navToggle");
     const mainNav = document.getElementById("mainNav");
 
