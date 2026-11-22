@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Endless Climb - UnGav</title>
-    <link rel="stylesheet" href="globals.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="site-header">
         <div class="wrap bar">
             <a href="index.html" class="brand">UnGav Interactive</a>
-            <nav class="nav">
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mainNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="mainNav">
                 <a href="index.html#games">Games</a>
                 <a href="index.html#tentang">Tentang</a>
                 <a href="index.html#tim">Tim</a>
@@ -21,17 +25,16 @@
 
     <section class="section wrap section-game-header">
         <p class="breadcrumb">Games / <strong>The Endless Climb</strong></p>
-        
+
         <div class="game-frame" id="gameFrame">
             <div class="game-cover">
                 <button class="play" id="startGame">
                     <div class="play-icon"></div> Mulai Main
                 </button>
             </div>
-            <!-- Embed Itch.io yang valid -->
             <iframe id="gameIframe" data-src="https://itch.io/embed-upload/17505853?color=daa0a0" allowfullscreen></iframe>
         </div>
-        
+
         <div class="game-controls-info">
             <div>
                 <p class="controls-text">[Kontrol: WASD / Spasi]</p>

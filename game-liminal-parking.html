@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liminal Parking - UnGav</title>
-    <link rel="stylesheet" href="globals.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="site-header">
         <div class="wrap bar">
             <a href="index.html" class="brand">UnGav Interactive</a>
-            <nav class="nav">
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mainNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="mainNav">
                 <a href="index.html#games">Games</a>
                 <a href="index.html#tentang">Tentang</a>
                 <a href="index.html#tim">Tim</a>
@@ -21,18 +25,17 @@
 
     <section class="section wrap section-game-header">
         <p class="breadcrumb">Games / <strong>Liminal Parking</strong></p>
-        
+
         <div class="game-frame" id="gameFrame">
             <div class="game-cover">
                 <button class="play" id="startGame">
                     <div class="play-icon"></div> Mulai Main
                 </button>
             </div>
-            <!-- INI ADALAH TEMPAT UNTUK EMBED ITCH.IO ANDA -->
-            <!-- Ganti isi data-src="..." dengan link embed HTML Itch.io Anda -->
+            <!-- Ganti isi data-src="..." dengan link embed HTML Itch.io -->
             <iframe id="gameIframe" data-src="MASUKKAN_LINK_EMBED_HTML_ITCH_IO_DISINI" allowfullscreen></iframe>
         </div>
-        
+
         <div class="game-controls-info">
             <div>
                 <p class="controls-text">[Kontrol: WASD / Mouse]</p>

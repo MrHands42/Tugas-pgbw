@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UnGav Interactive</title>
-    <link rel="stylesheet" href="globals.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="site-header">
         <div class="wrap bar">
             <a href="index.html" class="brand">UnGav Interactive</a>
-            <nav class="nav">
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mainNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="mainNav">
                 <a href="#games">Games</a>
                 <a href="#tentang">Tentang</a>
                 <a href="#tim">Tim</a>
@@ -72,20 +76,23 @@
         </div>
         <div class="services">
             <div class="panel text-center">
-                <!-- Foto Tim Gavin -->
-                <img src="images/tim/gavin.png" alt="Gavin Mahesya Marviano" class="team-photo">
+                <div class="polaroid deco-tape">
+                    <img src="images/tim/gavin.webp" alt="Gavin Mahesya Marviano" class="team-photo">
+                </div>
                 <h3 class="m-0">Gavin Mahesya Marviano</h3>
                 <p class="color-text">2591345032@polimedia.ac.id</p>
             </div>
             <div class="panel text-center">
-                <!-- Foto Tim Dzakwan -->
-                <img src="images/tim/dzakwan.png" alt="Muhammad Rafi Dzakwan" class="team-photo">
+                <div class="polaroid deco-clip">
+                    <img src="images/tim/dzakwan.webp" alt="Muhammad Rafi Dzakwan" class="team-photo">
+                </div>
                 <h3 class="m-0">Muhammad Rafi Dzakwan</h3>
                 <p class="color-text">2591345060@polimedia.ac.id</p>
             </div>
             <div class="panel text-center">
-                <!-- Foto Tim Sarah -->
-                <img src="images/tim/sarah.png" alt="Sarah Adibah" class="team-photo">
+                <div class="polaroid deco-sticker">
+                    <img src="images/tim/sarah.webp" alt="Sarah Adibah" class="team-photo">
+                </div>
                 <h3 class="m-0">Sarah Adibah</h3>
                 <p class="color-text">2591345081@polimedia.ac.id</p>
             </div>
@@ -131,5 +138,7 @@
             <p>UnGav Interactive | D4 Teknologi Permainan Polimedia</p>
         </div>
     </footer>
+
+    <script src="ide.js"></script>
 </body>
 </html>

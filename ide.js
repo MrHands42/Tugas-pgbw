@@ -1,84 +1,68 @@
-const gallery = document.getElementById('gallery');
-if (gallery) {
-    const handle = document.getElementById('handle');
-    const slides = [...gallery.querySelectorAll('.slide')];
+document.addEventListener("DOMContentLoaded", () => {
+    // Hamburger menu toggle
+    const navToggle = document.getElementById("navToggle");
+    const mainNav = document.getElementById("mainNav");
 
-    function focusSlides() {
-        const mid = gallery.scrollLeft + gallery.clientWidth / 2;
-        slides.forEach(s => {
-            const c = s.offsetLeft + s.offsetWidth / 2;
-            const d = Math.min(Math.abs(mid - c) / (s.offsetWidth * 1.2), 1);
-            s.style.setProperty('--s', (1.22 - 0.22 * d).toFixed(3));
-            s.style.zIndex = Math.round((1 - d) * 10);
-            s.classList.toggle('active', d < 0.35);
+    if (navToggle && mainNav) {
+        const closeNav = () => {
+            navToggle.classList.remove("is-open");
+            mainNav.classList.remove("is-open");
+            navToggle.setAttribute("aria-expanded", "false");
+        };
+
+        navToggle.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const isOpen = mainNav.classList.toggle("is-open");
+            navToggle.classList.toggle("is-open", isOpen);
+            navToggle.setAttribute("aria-expanded", String(isOpen));
         });
-    }
 
-    gallery.addEventListener('scroll', () => {
-        focusSlides();
-        handle.classList.add('hide');
-    }, { passive: true });
+        mainNav.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", closeNav);
+        });
 
-    window.addEventListener('resize', focusSlides);
+        document.addEventListener("click", (e) => {
+            if (!mainNav.contains(e.target) && !navToggle.contains(e.target)) {
+                closeNav();
+            }
+        });
 
-    focusSlides();
-    if (slides[1]) {
-        gallery.scrollLeft = slides[1].offsetLeft - (gallery.clientWidth - slides[1].offsetWidth) / 2;
-    }
-
-    function step(direction) {
-        if (!slides[0]) return;
-        const slideWidth = slides[0].offsetWidth + 20;
-        gallery.scrollBy({ left: direction * slideWidth, behavior: 'smooth' });
-    }
-
-    const prevBtn = document.getElementById('prevSlide');
-    const nextBtn = document.getElementById('nextSlide');
-    if (prevBtn) prevBtn.addEventListener('click', () => step(-1));
-    if (nextBtn) nextBtn.addEventListener('click', () => step(1));
-
-    let down = false;
-    let startX = 0;
-    let startLeft = 0;
-
-    gallery.addEventListener('mousedown', e => {
-        down = true;
-        startX = e.pageX;
-        startLeft = gallery.scrollLeft;
-        gallery.classList.add('dragging');
-    });
-
-    window.addEventListener('mouseup', () => {
-        down = false;
-        gallery.classList.remove('dragging');
-    });
-
-    window.addEventListener('mousemove', e => {
-        if (down) {
-            e.preventDefault();
-            gallery.scrollLeft = startLeft - (e.pageX - startX);
-        }
-    });
-}
-
-const gameFrame = document.getElementById('gameFrame');
-const gameIframe = document.getElementById('gameIframe');
-const startGame = document.getElementById('startGame');
-const fullscreenGame = document.getElementById('fullscreenGame');
-
-if (startGame && gameIframe && gameFrame) {
-    startGame.addEventListener('click', () => {
-        // Load the iframe src from data-src when play is clicked
-        gameIframe.src = gameIframe.dataset.src;
-        gameFrame.classList.add('playing');
-        fullscreenGame.hidden = false;
-    });
-
-    if (fullscreenGame) {
-        fullscreenGame.addEventListener('click', () => {
-            if (gameFrame.requestFullscreen) {
-                gameFrame.requestFullscreen();
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") {
+                closeNav();
             }
         });
     }
-}
+
+    // Game iframe loader & fullscreen
+    const gameFrame = document.getElementById("gameFrame");
+    const startBtn = document.getElementById("startGame");
+    const gameIframe = document.getElementById("gameIframe");
+    const fullscreenBtn = document.getElementById("fullscreenGame");
+
+    if (startBtn && gameFrame && gameIframe) {
+        startBtn.addEventListener("click", () => {
+            const src = gameIframe.getAttribute("data-src");
+            if (src && !gameIframe.getAttribute("src")) {
+                gameIframe.setAttribute("src", src);
+            }
+            gameFrame.classList.add("playing");
+
+            if (fullscreenBtn) {
+                fullscreenBtn.hidden = false;
+            }
+        });
+    }
+
+    if (fullscreenBtn && gameFrame) {
+        fullscreenBtn.addEventListener("click", () => {
+            if (gameFrame.requestFullscreen) {
+                gameFrame.requestFullscreen();
+            } else if (gameFrame.webkitRequestFullscreen) {
+                gameFrame.webkitRequestFullscreen();
+            } else if (gameFrame.msRequestFullscreen) {
+                gameFrame.msRequestFullscreen();
+            }
+        });
+    }
+});
