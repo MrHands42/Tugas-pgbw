@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri-Buddy Problem - UnGav</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrap bar">
+            <a href="index.html" class="brand">UnGav Interactive</a>
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mainNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav" id="mainNav">
+                <a href="index.html#games">Games</a>
+                <a href="index.html#tentang">Tentang</a>
+                <a href="index.html#tim">Tim</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section wrap section-game-header">
+        <p class="breadcrumb">Games / <strong>Tri-Buddy Problem</strong></p>
+
+        <div class="game-frame" id="gameFrame">
+            <div class="game-cover">
+                <button class="play" id="startGame">
+                    <div class="play-icon"></div> Mulai Main
+                </button>
+            </div>
+            <iframe id="gameIframe" data-src="https://itch.io/embed-upload/16446449?color=333333" allowfullscreen></iframe>
+        </div>
+
+        <div class="game-controls-info">
+            <div>
+                <p class="controls-text">[Kontrol: Mouse / Klik Kiri]</p>
+                <small class="desktop-notice">Lebih nyaman dimainkan di desktop</small>
+            </div>
+            <button class="btn btn-ghost btn-small" id="fullscreenGame" hidden>Layar Penuh</button>
+        </div>
+    </section>
+
+    <section class="section section-tint">
+        <div class="wrap about-grid">
+            <div>
+                <h2 class="mb-12">Tri-Buddy Problem</h2>
+                <span class="badge-playable-main">Playable</span>
+                <p class="font-600">Puzzle</p>
+                <p class="lead">Sebuah game teka-teki logika yang menguji kemampuanmu dalam menyelesaikan masalah. Hubungkan elemen-elemen yang ada, pecahkan struktur labirin, dan pastikan ketiga komponen utama bekerja secara harmonis untuk menyelesaikan setiap level.</p>
+            </div>
+            <div class="panel">
+                <h3 class="mb-20">Cara Main</h3>
+                <ul class="steps steps-vertical">
+                    <li>
+                        <strong>Interaksi</strong>
+                        <span>Klik pada elemen puzzle untuk mengubah status atau arahnya.</span>
+                    </li>
+                    <li>
+                        <strong>Sinergi</strong>
+                        <span>Pastikan ketiga komponen terhubung dengan benar untuk membuka jalan keluar.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>UnGav Interactive | D4 Teknologi Permainan Polimedia</p>
+        </div>
+    </footer>
+
+    <script src="ide.js"></script>
+</body>
+</html>

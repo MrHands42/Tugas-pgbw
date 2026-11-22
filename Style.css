@@ -657,6 +657,18 @@ figure { margin: 0; }
     transform: rotate(-12deg);
 }
 
+.team-role {
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 8px auto 20px;
+}
+
+.team-link {
+    width: 100%;
+    text-align: center;
+}
+
 .badge-playable {
     background: var(--surface-2);
     padding: 4px 8px;
